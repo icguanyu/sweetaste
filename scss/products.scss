@@ -96,10 +96,13 @@ $white: #fff;
   li{
     cursor: pointer;
     border: 1px solid $light_green;
-    padding: 15px 25px;
+    padding: 15px 20px;
     margin: 0 1px;
     &:hover{
       background: $light_green;
+    }
+    i{
+      font-size: 1rem;
     }
   }
   .active{

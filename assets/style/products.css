@@ -138,12 +138,16 @@
 .navigation li {
   cursor: pointer;
   border: 1px solid #eaf0ed;
-  padding: 15px 25px;
+  padding: 15px 20px;
   margin: 0 1px;
 }
 
 .navigation li:hover {
   background: #eaf0ed;
+}
+
+.navigation li i {
+  font-size: 1rem;
 }
 
 .navigation .active {

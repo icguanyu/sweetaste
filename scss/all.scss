@@ -58,7 +58,9 @@ li {
   padding: 0;
   margin: 0;
 }
-input{
+input,select{
+  outline: none;
+  border: none;
   font-family: 'cwTeXYen', sans-serif;
   font-size: 18px;
 }
