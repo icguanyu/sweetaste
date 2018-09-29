@@ -1,4 +1,4 @@
-#六角學院【挑戰活動】網頁切版 PK 戰
+# 六角學院【挑戰活動】網頁切版 PK 戰
 
 [活動緣起](https://www.hexschool.com/2018/09/13/2018-09-13-hexschool-challenge/)
 
