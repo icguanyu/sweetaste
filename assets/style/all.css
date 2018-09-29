@@ -57,6 +57,10 @@ li {
 
 input,
 select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0px;
   outline: none;
   border: none;
   font-family: "cwTeXYen", sans-serif;

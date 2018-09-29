@@ -59,6 +59,8 @@ li {
 }
 input,
 select {
+  appearance: none;
+  border-radius: 0px;
   outline: none;
   border: none;
   font-family: "cwTeXYen", sans-serif;
