@@ -2,15 +2,15 @@
 
 $green: #3f5d45;
 $light_green: #eaf0ed;
-$yellow: #FFE180;
+$yellow: #ffe180;
 $black: #000;
 $white: #fff;
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 28px;
   text-transform: none;
@@ -27,9 +27,8 @@ $white: #fff;
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
-
 
 body,
 html {
@@ -37,7 +36,7 @@ html {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'cwTeXYen', sans-serif;
+  font-family: "cwTeXYen", sans-serif;
   font-size: 18px;
   color: $green;
 }
@@ -58,10 +57,11 @@ li {
   padding: 0;
   margin: 0;
 }
-input,select{
+input,
+select {
   outline: none;
   border: none;
-  font-family: 'cwTeXYen', sans-serif;
+  font-family: "cwTeXYen", sans-serif;
   font-size: 18px;
 }
 a {
@@ -96,13 +96,70 @@ header {
       li {
         margin: 0 30px;
         padding: 5px 10px;
-        transition: all .3s;
-        &:hover{
+        transition: all 0.3s;
+        &:hover {
           box-shadow: 0 3px 0 $green;
         }
         img {
           width: 24px;
           height: 24px;
+        }
+      }
+    }
+  }
+  .mobile_menu {
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .hamburger {
+      cursor: pointer;
+      display: inline-block;
+      span {
+        margin: 5px 0;
+        display: inline-block;
+        position: relative;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background: $green;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $green;
+        }
+        &:before {
+          top: -5px;
+        }
+        &:after {
+          top: 5px;
+        }
+      }
+    }
+    ul{
+      display: none;
+      background: $white;
+      width: 100%;
+      flex-direction: column;
+      text-align: left;
+      padding: 20px 0; 
+      li{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid $light_green;
+        a{
+          display: block;
+          width: 100%;
+        }
+        &:last-child{
+          border: none ;
         }
       }
     }
@@ -128,7 +185,7 @@ header {
     width: 260px;
     height: 260px;
     overflow: hidden;
-    .text{
+    .text {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -137,20 +194,20 @@ header {
       background: $green;
       color: $white;
       opacity: 0.8;
-      transition: all .3s;
-      &:hover{
+      transition: all 0.3s;
+      &:hover {
         background: $yellow;
         color: $green;
       }
     }
     p {
-      writing-mode:vertical-rl;
+      writing-mode: vertical-rl;
       text-align: center;
       letter-spacing: 10px;
       cursor: pointer;
       font-size: 1.5rem;
     }
-    .blur_bg{
+    .blur_bg {
       transform: scale(1.1);
       position: absolute;
       background-size: cover;
@@ -177,37 +234,43 @@ header {
   }
 }
 /*介紹*/
-section{
+
+.mobile_pic{
+  width: 100%;
+  display: none;
+  padding: 0 90px;
+}
+section {
   width: 100%;
   height: 420px;
   padding: 40px 35px;
   margin-bottom: 80px;
   background: $light_green;
-  .contain{
+  .contain {
     display: flex;
     position: relative;
     align-items: center;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     width: 940px;
     margin: auto;
   }
-  .reason{
-    flex:1;
+  .reason {
+    flex: 1;
     display: flex;
     align-items: center;
     height: 460px;
     margin: 0px 40px;
-    p{
+    p {
       writing-mode: vertical-rl;
       display: inline-block;
       font-size: 1rem;
       line-height: 28px;
       max-height: 300px;
-      color:#8DA291;
+      color: #8da291;
       margin: 0px 15px;
     }
-    img{
+    img {
       position: absolute;
       top: 0;
       right: 0;
@@ -215,52 +278,54 @@ section{
       height: 300px;
     }
   }
-  .pic_1,.pic_2{
-    flex:1;
+  .pic_1,
+  .pic_2 {
+    flex: 1;
     width: 460px;
     height: 460px;
     background-size: cover;
     background-position: center;
   }
-  .pic_1{
+  .pic_1 {
     background-image: url("../../img/reason1.jpg");
-  }  
-  .pic_2{
+  }
+  .pic_2 {
     background-image: url("../../img/reason2.jpg");
   }
 }
-.noreason{
+.noreason {
   width: 1024px;
   height: 360px;
   background-image: url("../../img/lg-想吃甜點是不需要理由的.png");
   background-size: contain;
-  background-position: center ;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 120px auto;
 }
 /*產品*/
-.products{
+.products {
   width: 1024px;
   display: flex;
   margin: 30px auto;
   justify-content: space-around;
-  .item{
+  .item {
     display: flex;
     flex-direction: column;
-    .img_box{
+    .img_box {
       width: 300px;
       height: 300px;
       overflow: hidden;
-      img{
-        transition: all .3s;
+      img {
+        transition: all 0.3s;
         width: 100%;
       }
-      &:hover{
-        img{
+      &:hover {
+        img {
           transform: scale(1.1);
         }
       }
     }
-    .cate{
+    .cate {
       font-size: 1rem;
       position: absolute;
       writing-mode: vertical-lr;
@@ -272,36 +337,39 @@ section{
       color: $white;
       margin-left: 15px;
     }
-    .item_info{
+    .item_info {
       display: flex;
       justify-content: space-around;
       padding: 10px;
       font-size: 1.25rem;
-      .price{
+      .price {
         font-weight: bold;
       }
     }
-    .addcart{
+    .addcart {
       cursor: pointer;
       background: $light_green;
       font-size: 1.2rem;
       text-align: center;
       padding: 10px 90px;
-      transition: all .3s;
-      &:hover{
+      transition: all 0.3s;
+      &:hover {
         color: $white;
         background: $green;
+        a {
+          color: $light_green;
+        }
       }
     }
   }
 }
 /*底部*/
-footer{
+footer {
   margin-top: 40px;
   background: $light_green;
-  .subscribe{
+  .subscribe {
     background: $green;
-    .container{
+    .container {
       width: 960px;
       margin: auto;
       display: flex;
@@ -309,38 +377,38 @@ footer{
       align-items: center;
       padding: 30px 0px;
     }
-    .logo{
+    .logo {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    p{
+    p {
       color: $light_green;
       font-size: 1.5rem;
       padding: 0 20px;
     }
-    img{
+    img {
       width: 40px;
     }
   }
-  .email{
+  .email {
     display: flex;
     align-items: center;
     justify-content: center;
-    .icon{
+    .icon {
       height: 56px;
       line-height: 56px;
       padding: 6px 20px;
       background: #fff;
     }
-    label{
+    label {
       cursor: pointer;
       background: $yellow;
       height: 56px;
       line-height: 56px;
       padding: 6px 20px;
     }
-    input{
+    input {
       color: $green;
       font-size: 1.2rem;
       width: 300px;
@@ -350,36 +418,36 @@ footer{
       border: none;
     }
   }
-  .bottom{
+  .bottom {
     display: flex;
     width: 960px;
     height: 340px;
     margin: auto;
     padding: 30px 0;
-    .left{
-      flex:1;
+    .left {
+      flex: 1;
       height: 100%;
       justify-content: space-around;
       display: flex;
       flex-direction: column;
-      .logo{
-        img{
+      .logo {
+        img {
           width: 170px;
         }
       }
-      .icon{
-        img{
+      .icon {
+        img {
           width: 32px;
         }
       }
     }
-    .right{
-      flex:1;
+    .right {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: space-between;
-      img{
+      img {
         width: 60px;
       }
     }

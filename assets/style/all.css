@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -20,8 +20,8 @@
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
 }
 
 body,
@@ -30,7 +30,7 @@ html {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'cwTeXYen', sans-serif;
+  font-family: "cwTeXYen", sans-serif;
   font-size: 18px;
   color: #3f5d45;
 }
@@ -55,10 +55,11 @@ li {
   margin: 0;
 }
 
-input, select {
+input,
+select {
   outline: none;
   border: none;
-  font-family: 'cwTeXYen', sans-serif;
+  font-family: "cwTeXYen", sans-serif;
   font-size: 18px;
 }
 
@@ -115,8 +116,8 @@ header nav ul {
 header nav ul li {
   margin: 0 30px;
   padding: 5px 10px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 header nav ul li:hover {
@@ -127,6 +128,83 @@ header nav ul li:hover {
 header nav ul li img {
   width: 24px;
   height: 24px;
+}
+
+header .mobile_menu {
+  display: none;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .mobile_menu .hamburger {
+  cursor: pointer;
+  display: inline-block;
+}
+
+header .mobile_menu .hamburger span {
+  margin: 5px 0;
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #3f5d45;
+}
+
+header .mobile_menu .hamburger span:before, header .mobile_menu .hamburger span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3f5d45;
+}
+
+header .mobile_menu .hamburger span:before {
+  top: -5px;
+}
+
+header .mobile_menu .hamburger span:after {
+  top: 5px;
+}
+
+header .mobile_menu ul {
+  display: none;
+  background: #fff;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 20px 0;
+}
+
+header .mobile_menu ul li {
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #eaf0ed;
+}
+
+header .mobile_menu ul li a {
+  display: block;
+  width: 100%;
+}
+
+header .mobile_menu ul li:last-child {
+  border: none;
 }
 
 /*首頁大圖*/
@@ -174,12 +252,12 @@ header nav ul li img {
   background: #3f5d45;
   color: #fff;
   opacity: 0.8;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .topic_area .topic .text:hover {
-  background: #FFE180;
+  background: #ffe180;
   color: #3f5d45;
 }
 
@@ -218,6 +296,12 @@ header nav ul li img {
 }
 
 /*介紹*/
+.mobile_pic {
+  width: 100%;
+  display: none;
+  padding: 0 90px;
+}
+
 section {
   width: 100%;
   height: 420px;
@@ -263,7 +347,7 @@ section .reason p {
   font-size: 1rem;
   line-height: 28px;
   max-height: 300px;
-  color: #8DA291;
+  color: #8da291;
   margin: 0px 15px;
 }
 
@@ -275,7 +359,8 @@ section .reason img {
   height: 300px;
 }
 
-section .pic_1, section .pic_2 {
+section .pic_1,
+section .pic_2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -299,6 +384,7 @@ section .pic_2 {
   background-image: url("../../img/lg-想吃甜點是不需要理由的.png");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 120px auto;
 }
 
@@ -330,8 +416,8 @@ section .pic_2 {
 }
 
 .products .item .img_box img {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   width: 100%;
 }
 
@@ -375,13 +461,17 @@ section .pic_2 {
   font-size: 1.2rem;
   text-align: center;
   padding: 10px 90px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .products .item .addcart:hover {
   color: #fff;
   background: #3f5d45;
+}
+
+.products .item .addcart:hover a {
+  color: #eaf0ed;
 }
 
 /*底部*/
@@ -451,7 +541,7 @@ footer .email .icon {
 
 footer .email label {
   cursor: pointer;
-  background: #FFE180;
+  background: #ffe180;
   height: 56px;
   line-height: 56px;
   padding: 6px 20px;

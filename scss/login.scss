@@ -71,6 +71,16 @@ $white: #fff;
     font-size: 1.5rem;
     width: 100%;
   }
+  .mobile_social{
+    display: none;
+    background: $light_green;
+    justify-content: center;
+    align-items: center;
+    img{
+      margin: 0 10px;
+      width: 25%;
+    }
+  }
 }
 .active{
   height: 380px;

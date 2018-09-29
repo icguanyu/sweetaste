@@ -9,15 +9,30 @@
   <link href="img/logo-dark.png" type="image/x-icon" rel="shortcut icon">
   <link rel="stylesheet" href="assets/style/all.css">
   <link rel="stylesheet" href="assets/style/checkout.css">
+  <link rel="stylesheet" href="assets/style/rwd.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="js/all.js"></script>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="pc_menu">
       <div class="logo">
-        <img src="img/logo-all-dark.png" alt="logo">
+        <a href="index.html"><img src="img/logo-all-dark.png" alt="logo"></a>
       </div>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="product.html">甜點</a></li>
+        <li><a href="login.html">登入</a></li>
+        <li><a href="cart.html"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+    </nav>
+    <nav class="mobile_menu">
+      <div class="hamburger">
+        <span></span>
+      </div>
+      <img src="img/logo-all-dark.png" alt="logo">
+      <a href="cart.html"><i class="material-icons">shopping_cart</i></a>
       <ul>
         <li><a href="index.html">首頁</a></li>
         <li><a href="product.html">甜點</a></li>
@@ -42,7 +57,7 @@
           <input type="tel" id="phone" placeholder="0000-0000-0000-0000">
           <i class="material-icons">credit_card</i>
         </div>
-        
+
       </div>
       <div class="set">
         <div>
@@ -177,6 +192,8 @@
       </div>
     </div>
   </footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="js/all.js"></script>
 </body>
 
 </html>
